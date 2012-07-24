@@ -1,0 +1,75 @@
+/* 
+    Document   : gddmain
+    Created on : Jul 23, 2012, 2:17:57 PM
+    Author     : Magnet
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.title
+{
+    position: relative;
+    top: 75px;
+    font-size: x-large;
+    margin:0 auto;
+    text-align: center;
+    border:2px solid #a1a1a1;
+    padding:10px 40px; 
+    background:#C21F1F;
+    width:200px;
+    border-radius:25px;
+    -moz-border-radius:25px; /* Firefox 3.6 and earlier */
+}
+
+.info
+{
+    background-color: khaki;
+    box-shadow: 10px 10px 5px #888888;
+    text-align: right;
+    position:absolute;
+    top:0;
+    right:0;
+    width:180px;
+}
+
+.menu
+{   
+    position: relative;
+    top: 250px;
+    margin:0 auto;
+    cursor:pointer;
+    text-align: center;
+    border:2px solid #a1a1a1;
+    padding:10px 40px; 
+    background:#dddddd;
+    width:100px;
+    border-radius:25px;
+    -moz-border-radius:25px; /* Firefox 3.6 and earlier */
+}
+
+.submenu
+{
+    -webkit-animation: fadi 1s 1;
+    position: relative;
+    display: none;
+    top: 250px;
+    margin:0 auto;
+    cursor:pointer;
+    text-align: center;
+    border:2px solid #a1a1a1;
+    padding:10px 40px; 
+    background:#C21F1F;
+    width:300px;
+    border-radius:25px;
+    -moz-border-radius:25px; /* Firefox 3.6 and earlier */
+}
+
+@-webkit-keyframes fadi {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-moz-keyframes fadi {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
