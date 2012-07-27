@@ -21,6 +21,12 @@
     -moz-border-radius:25px; /* Firefox 3.6 and earlier */
 }
 
+.mainbody
+{
+    position: relative;
+    top: 150px;
+}
+
 .info
 {
     background-color: khaki;

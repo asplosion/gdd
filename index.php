@@ -31,16 +31,19 @@
         <div id="load" class="submenu">
             <form action="load.php" method="POST">
                 <?php 
-                    $file = 'projects.dat'; 
-                    $handle = fopen($file, "r");
-                    if ($handle) {
-                        while (($buffer = fgets($handle, 4096)) !== false) {
-                            echo '<input type="radio" name="file" value="' . $buffer .'">' . $buffer . '</input><br />';
+                    $file = 'projects.dat';
+                    if (file_exists($file)) {
+                        $handle = fopen($file, "r");
+                        if ($handle) {
+                            while (! feof($handle)) {
+                                $filename = trim(fgets($handle));
+                                if (strlen($filename) > 0) {
+                                    echo '<input type="radio" name="file" value="' . $filename .'">' . $filename . '</input><br />';
+                                }
+                            }
+                    
+                            fclose($handle);
                         }
-                        if (!feof($handle)) {
-                            echo "Error: unexpected fgets() fail\n";
-                        }
-                        fclose($handle);
                     }
                 ?>
                 <label for="pass">Password:</label>

@@ -32,6 +32,10 @@
                 }
                 fclose($handle);
             }
+            
+            if (!copy('default.dat', 'projects/' . $file . '.xml')) {
+                echo "failed to copy default.dat to " . $file . ".xml \n";
+            }
         ?>   
     </body>
 </html>
